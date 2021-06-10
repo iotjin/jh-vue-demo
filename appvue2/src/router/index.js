@@ -6,6 +6,9 @@ import Module2 from "../views/module2/index.vue";
 import Module3 from "../views/module3/index.vue";
 import Module4 from "../views/module4/index.vue";
 
+import DemoList from "../views/module2/DemoList";
+
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -15,6 +18,7 @@ const routes = [
   { path: "/Module3", name: "Module3", component: Module3, },
   { path: "/Module4", name: "Module4", component: Module4, },
 
+  { path: "/Module2/DemoList", name: "DemoList", component: DemoList, },
 ];
 
 const router = new VueRouter({

@@ -17,5 +17,14 @@ module.exports = {
       .set("@assets", resolve("src/assets"))
       .set("@tab", resolve("src/assets/tab"))
   },
+  // less设置
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [
+        resolve("src/less/global.less")
+      ]
+    }
+  }
 
 }

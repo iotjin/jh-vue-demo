@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <div class="bg">
     <BaseNavBar :title="title" :isBack="isBack">
       <!-- <van-icon name="cross" size="18" slot="left"/> -->
       <!-- <van-icon name="circle" size="18" slot="right"/>  -->
     </BaseNavBar>
-    <router-view></router-view>
     <BaseTabBar
       :selected="selected"
       :tabBars="tabBars"

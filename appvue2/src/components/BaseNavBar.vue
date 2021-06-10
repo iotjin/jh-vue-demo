@@ -1,5 +1,6 @@
 <template>
-  <div class="NavBar">
+  <div class="navBar">
+    <!-- <div class="placeholder"></div> -->
     <van-nav-bar
       :title="title"
       fixed
@@ -18,6 +19,7 @@
         <slot name="right"></slot>
       </div>
     </van-nav-bar>
+    <router-view class="router-content"></router-view>
   </div>
 </template>
 
@@ -34,14 +36,14 @@ export default {
     // 是否显示返回按钮，默认为true，优先级低于slot
     isBack: { type: [Boolean, String], default: true },
     // 默认返回按钮颜色
-    backIconColor: { type: String, default: "#000" },
+    backIconColor: { type: String, default: "white" },
     // 标题
     title: { type: String, default: "" },
   },
   methods: {
     onClickLeft() {
       console.log("点击返回按钮");
-      // this.$router.go(-1);
+      this.$router.go(-1);
     },
     onClickRight() {
       console.log("点击右侧按钮");
@@ -57,8 +59,26 @@ export default {
 <style>
 .van-nav-bar {
   background: white;
+  background: #38bc9d;
 }
 .van-nav-bar__title {
   color: black;
+  color: white;
 }
+.router-content {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+/* .placeholder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: constant(safe-area-inset-top);
+  height: env(safe-area-inset-top);
+  background: yellow;
+  z-index: 2;
+  padding-bottom: 46px;
+} */
 </style>

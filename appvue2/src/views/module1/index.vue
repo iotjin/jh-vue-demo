@@ -1,13 +1,18 @@
 <template>
-  <div>模块1</div>
+  <div class="bg">模块1</div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
+<style lang="less">
+@import "../../less/global.less";
+.bg {
+  width: auto;
+  height: 1000px;
+  background: yellow;
+  background: @base-bgColor;
+  background: yellow;
+}
 </style>
