@@ -9,7 +9,21 @@
 </template>
 
 <script>
-export default {};
+export default {
+  components: {},
+  data() {
+    return {};
+  },
+  methods: {},
+  created() {
+    console.log(this.$route); //打印当前路由属性
+    if (this.$route.path === "/") {
+      this.$router.replace({ name: "Main" });
+      console.log("123");
+      // this.$router.replace("/Main");
+    }
+  },
+};
 </script>
 
 <style></style>

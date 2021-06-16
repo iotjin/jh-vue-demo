@@ -1,17 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import { NavBar } from 'vant';
-import { Tabbar, TabbarItem } from 'vant';
-import { Icon } from 'vant';
-import { Button } from 'vant';
+import BaseNavBar from "./components/BaseNavBar.vue";
+import './vant/vant.js'
 
 
-Vue.use(NavBar);
-Vue.use(Tabbar);
-Vue.use(TabbarItem);
-Vue.use(Icon);
-Vue.use(Button);
+Vue.component('BaseNavBar',BaseNavBar)
 
 Vue.config.productionTip = false
 

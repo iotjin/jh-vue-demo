@@ -4,8 +4,8 @@
     <van-nav-bar
       :title="title"
       fixed
-      placeholder
       safe-area-inset-top
+      :placeholder="isPlaceholder"
       @click-left="onClickLeft"
       @click-right="onClickRight"
     >
@@ -19,7 +19,9 @@
         <slot name="right"></slot>
       </div>
     </van-nav-bar>
-    <router-view class="router-content"></router-view>
+
+    <!-- 内容添加占位，占位移到main里面 -->
+    <!-- <template class="router-content"></template> -->
   </div>
 </template>
 
@@ -39,6 +41,8 @@ export default {
     backIconColor: { type: String, default: "white" },
     // 标题
     title: { type: String, default: "" },
+    // 固定在顶部时，是否在标签位置生成一个等高的占位元素
+    isPlaceholder: { type: Boolean, default: false },
   },
   methods: {
     onClickLeft() {
@@ -49,10 +53,7 @@ export default {
       console.log("点击右侧按钮");
     },
   },
-  created() {
-    // console.log(this.$props.isBack);
-    // console.log(this.$props.title);
-  },
+  created() {},
 };
 </script>
 
@@ -61,14 +62,17 @@ export default {
   background: white;
   background: #38bc9d;
 }
+
 .van-nav-bar__title {
   color: black;
   color: white;
 }
-.router-content {
+
+/* .router-content {
   padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
-}
+} */
+
 /* .placeholder {
   position: fixed;
   top: 0;

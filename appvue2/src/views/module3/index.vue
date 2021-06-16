@@ -1,13 +1,27 @@
 <template>
-  <div class="bg">模块3</div>
+  <div class="bg3">
+    <BaseNavBar :title="title" :isBack="false"> </BaseNavBar>
+    <div>这是模块3</div>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  components: {},
+  data() {
+    return {
+      title: "模块3",
+    };
+  },
+  methods: {},
+  created() {
+    console.log("模块3");
+  },
+};
 </script>
 
 <style>
-.bg {
+.bg3 {
   width: auto;
   height: 1000px;
   background: white;

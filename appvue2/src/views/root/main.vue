@@ -1,9 +1,10 @@
 <template>
   <div class="bg">
-    <BaseNavBar :title="title" :isBack="isBack">
-      <!-- <van-icon name="cross" size="18" slot="left"/> -->
-      <!-- <van-icon name="circle" size="18" slot="right"/>  -->
+    <BaseNavBar :title="title" :isBack="isBack" :isPlaceholder="true">
+      <!-- <van-icon name="cross" size="18" slot="left" />
+      <van-icon name="circle" size="18" slot="right" /> -->
     </BaseNavBar>
+    <router-view class="router-content"></router-view>
     <BaseTabBar
       :selected="selected"
       :tabBars="tabBars"
@@ -25,6 +26,7 @@ export default {
       title: "标题",
       isBack: false,
       selected: 1,
+      isPlaceholder: true,
       tabBars: [
         {
           name: "/Module1",
@@ -51,7 +53,7 @@ export default {
           selectedIconPath: require("@assets/tab/tab3_select.png"),
         },
         // {
-        //   name: "/Module4",
+        //   name: "Module4",
         //   isShowRedDot: false,
         //   badge: "哈",
         //   text: "模块四",
@@ -69,7 +71,13 @@ export default {
         : false;
     },
   },
+  created() {},
 };
 </script>
 
-<style></style>
+<style>
+.router-content {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+</style>

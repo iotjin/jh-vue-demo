@@ -2,20 +2,24 @@
   <div id="app">
     <Main></Main>
   </div>
+
+  <!-- <router-view id="app">
+    <Root></Root>
+  </router-view> -->
 </template>
 
 <script>
+// import Root from "./views/root/index.vue";
 import Main from "./views/root/main.vue";
 
 export default {
   name: "App",
   components: {
+    // Root,
     Main,
   },
   data() {
-    return {
-      title: "标题",
-    };
+    return {};
   },
   methods: {},
 };
@@ -26,8 +30,5 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
 }
 </style>

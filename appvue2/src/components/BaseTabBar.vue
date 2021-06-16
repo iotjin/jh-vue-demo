@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="$route.meta.isShowTabBar">
     <van-tabbar
       v-model="currentSelected"
       :inactive-color="color"
@@ -17,11 +17,11 @@
       -->
       <template v-for="item in tabBars">
         <van-tabbar-item
-          replace
           :key="item.name"
           :to="item.name"
           :badge="item.badge"
           :dot="item.isShowRedDot"
+          replace
         >
           <span>{{ item.text }}</span>
           <template #icon="props">
@@ -106,7 +106,7 @@ export default {
       this.$emit("onChange", index); //往外传值
     },
   },
-  //初始化页面选中状态
+  // 初始化页面选中状态
   created() {
     /*
       由于 vant 标签栏路由模式，无法自动加载页面，所以这里需要初始化
@@ -116,11 +116,11 @@ export default {
       console.log(this.currentSelected);
       this.$router.push("/Module1");
       */
-
-    if (this.$route.path === "/" && this.tabBars.length) {
+    if (this.$route.path === "/Main" && this.tabBars.length) {
       this.$router.push(this.tabBars[this.currentSelected].name);
     }
   },
+  mounted() {},
 };
 </script>
 
