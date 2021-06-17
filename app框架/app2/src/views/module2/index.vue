@@ -1,0 +1,48 @@
+<template>
+  <div class="bg2" v-bind:class="{ bg10: isActive }">
+    <BaseNavBar :title="title" :isBack="false"> </BaseNavBar>
+    模块2
+    <div class="button" @click="onClick">按钮</div>
+  </div>
+</template>
+
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+      title: "模块2",
+      isActive: false,
+    };
+  },
+  methods: {
+    onClick() {
+      console.log("点击按钮");
+      this.$router.push({ name: "DemoList", params: { setid: 111222 } });
+    },
+  },
+  created() {
+    console.log("模块2");
+  },
+  mounted() {
+    console.log("mounted");
+  },
+};
+</script>
+
+<style>
+.bg2 {
+  width: 100%;
+  height: 100vh;
+  /* background: red; */
+}
+.button {
+  width: 200px;
+  height: 200px;
+  background: palevioletred;
+}
+
+.bg10 {
+  background: pink;
+}
+</style>
