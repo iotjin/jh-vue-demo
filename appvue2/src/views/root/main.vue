@@ -4,7 +4,7 @@
       <!-- <van-icon name="cross" size="18" slot="left" />
       <van-icon name="circle" size="18" slot="right" /> -->
     </BaseNavBar>
-    <router-view class="router-content"></router-view>
+    <router-view></router-view>
     <BaseTabBar
       :selected="selected"
       :tabBars="tabBars"
@@ -26,7 +26,6 @@ export default {
       title: "标题",
       isBack: false,
       selected: 1,
-      isPlaceholder: true,
       tabBars: [
         {
           name: "/Module1",
@@ -75,9 +74,4 @@ export default {
 };
 </script>
 
-<style>
-.router-content {
-  padding-top: constant(safe-area-inset-top);
-  padding-top: env(safe-area-inset-top);
-}
-</style>
+<style></style>

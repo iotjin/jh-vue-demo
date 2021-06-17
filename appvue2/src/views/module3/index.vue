@@ -24,6 +24,6 @@ export default {
 .bg3 {
   width: auto;
   height: 1000px;
-  background: white;
+  /* background: orange; */
 }
 </style>

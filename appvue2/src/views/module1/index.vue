@@ -30,5 +30,6 @@ export default {
   height: 1000px;
   background: yellow;
   background: @base-bgColor;
+  // background: yellow;
 }
 </style>

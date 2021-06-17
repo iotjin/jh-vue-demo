@@ -1,5 +1,5 @@
 <template>
-  <div class="bg2">
+  <div class="bg2" v-bind:class="{ bg10: isActive }">
     <BaseNavBar :title="title" :isBack="false"> </BaseNavBar>
     模块2
     <div class="button" @click="onClick">按钮</div>
@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       title: "模块2",
+      isActive: false,
     };
   },
   methods: {
@@ -29,11 +30,15 @@ export default {
 <style>
 .bg2 {
   width: auto;
-  height: 1000px;
+  height: 100vh;
+  /* background: red; */
 }
 .button {
   width: 200px;
   height: 200px;
   background: palevioletred;
+}
+.bg10 {
+  background: pink;
 }
 </style>

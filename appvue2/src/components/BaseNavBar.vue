@@ -1,11 +1,9 @@
 <template>
   <div class="navBar">
-    <!-- <div class="placeholder"></div> -->
     <van-nav-bar
       :title="title"
       fixed
       safe-area-inset-top
-      :placeholder="isPlaceholder"
       @click-left="onClickLeft"
       @click-right="onClickRight"
     >
@@ -19,9 +17,7 @@
         <slot name="right"></slot>
       </div>
     </van-nav-bar>
-
-    <!-- 内容添加占位，占位移到main里面 -->
-    <!-- <template class="router-content"></template> -->
+    <div class="nav-top-placeholder" v-if="isPlaceholder"></div>
   </div>
 </template>
 
@@ -68,21 +64,9 @@ export default {
   color: white;
 }
 
-/* .router-content {
+.nav-top-placeholder {
   padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
-} */
-
-/* .placeholder {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: constant(safe-area-inset-top);
-  height: env(safe-area-inset-top);
-  background: yellow;
-  z-index: 2;
-  padding-bottom: 46px;
-} */
+  height: 44px;
+}
 </style>
