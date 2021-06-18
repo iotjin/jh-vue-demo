@@ -5,11 +5,7 @@
       <van-icon name="circle" size="18" slot="right" /> -->
     </BaseNavBar>
     <router-view></router-view>
-    <BaseTabBar
-      :selected="selected"
-      :tabBars="tabBars"
-      @onChange="onChange"
-    ></BaseTabBar>
+    <BaseTabBar :selected="selected" :tabBars="tabBars" @onChange="onChange"></BaseTabBar>
   </div>
 </template>
 
@@ -35,8 +31,16 @@ export default {
           iconPath: require("@assets/tab/tab1.png"),
           selectedIconPath: require("@assets/tab/tab1_select.png"),
         },
+        // {
+        //   name: "/Module2",
+        //   isShowRedDot: false,
+        //   badge: "",
+        //   text: "Demo",
+        //   iconPath: require("@assets/tab/tab2.png"),
+        //   selectedIconPath: require("@assets/tab/tab2_select.png"),
+        // },
         {
-          name: "/Module2",
+          name: "/DemoList",
           isShowRedDot: false,
           badge: "",
           text: "Demo",
@@ -70,7 +74,7 @@ export default {
         : false;
     },
   },
-  created() {},
+  created() { },
 };
 </script>
 

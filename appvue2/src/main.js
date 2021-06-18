@@ -5,7 +5,7 @@ import BaseNavBar from "./components/BaseNavBar.vue";
 import './vant/vant.js'
 
 
-Vue.component('BaseNavBar',BaseNavBar)
+Vue.component('BaseNavBar', BaseNavBar)
 
 Vue.config.productionTip = false
 

@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    <BaseNavBar :title="title" :isBack="false"></BaseNavBar>
+    <BaseNavBar :title="title"> </BaseNavBar>
     <van-cell-group>
       <van-cell center :title="item.text" is-link v-for="item in dataArr" :key="item.name" @click="onClick(item)" />
     </van-cell-group>
@@ -12,13 +12,13 @@ export default {
   components: {},
   data() {
     return {
-      title: "DemoList",
+      title: "ListViewDemoList",
       dataArr: [
-        { text: "ListView", name: "ListViewDemoList" },
-        { text: "GridView", name: "GridViewDemoList" },
-        { text: "ECharts", name: "EChartsDemoList" },
-        { text: "UI", name: "" },
-        { text: "Other", name: "" },
+        { text: "ListView1", name: "ListView1" },
+        { text: "ListView2", name: "ListView2" },
+        { text: "ListView3", name: "ListView3" },
+        { text: "ListView4", name: "ListView4" },
+        { text: "ListView5", name: "ListView5" },
       ],
     };
   },
@@ -26,10 +26,7 @@ export default {
     onClick(item) {
       console.log(JSON.stringify(item));
       console.log(item.text);
-      if (item.name) {
-        this.$router.push({ name: item.name });
-      }
-
+      // this.$router.push({ name: item.name });
     },
   },
   created() { },

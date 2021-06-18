@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg">
     <BaseNavBar :title="title" :isBack="false"> </BaseNavBar>
     <div>这是模块4</div>
   </div>
@@ -14,7 +14,7 @@ export default {
     };
   },
   methods: {},
-  created() {},
+  created() { },
 };
 </script>
 

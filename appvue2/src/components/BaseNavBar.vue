@@ -1,12 +1,6 @@
 <template>
   <div class="navBar">
-    <van-nav-bar
-      :title="title"
-      fixed
-      safe-area-inset-top
-      @click-left="onClickLeft"
-      @click-right="onClickRight"
-    >
+    <van-nav-bar :title="title" fixed safe-area-inset-top @click-left="onClickLeft" @click-right="onClickRight">
       <div v-if="$slots.left" slot="left">
         <slot name="left"></slot>
       </div>
@@ -49,7 +43,7 @@ export default {
       console.log("点击右侧按钮");
     },
   },
-  created() {},
+  created() { },
 };
 </script>
 

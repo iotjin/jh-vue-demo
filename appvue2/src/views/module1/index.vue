@@ -1,5 +1,5 @@
 <template>
-  <div class="bg1">
+  <div class="bg">
     <div>
       <BaseNavBar :title="title" :isBack="isBack"> </BaseNavBar>
       这是模块1
@@ -25,9 +25,9 @@ export default {
 
 <style lang="less">
 @import "../../less/global.less";
-.bg1 {
-  width: auto;
-  height: 1000px;
+.bg {
+  width: 100%;
+  height: 100vh;
   background: yellow;
   background: @base-bgColor;
   // background: yellow;
