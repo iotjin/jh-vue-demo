@@ -24,7 +24,8 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../less/global.less";
+// 看 vue.config.js
+// @import "../../config/less/global.less";
 .bg {
   width: 100%;
   height: 100vh;

@@ -8,7 +8,7 @@ module.exports = {
   publicPath: './',
   assetsDir: './',
   outputDir: path.relative(__dirname, './dist'),
-  outputDir: 'dist',
+  // outputDir: 'dist',
   // 资源路径简写
   chainWebpack: config => {
     //添加别名
@@ -22,7 +22,7 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'less',
       patterns: [
-        resolve("src/less/global.less")
+        resolve("src/config/less/global.less")
       ]
     }
   }
