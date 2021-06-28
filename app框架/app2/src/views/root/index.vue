@@ -1,29 +1,37 @@
 <template>
-  <div>
+  <div class="bg">
     root
-    <div>root</div>
-    <div>root</div>
-    <div>root</div>
-    <div>root</div>
+    root
+    root
+    root
+    root
   </div>
 </template>
 
 <script>
+
 export default {
-  components: {},
+  components: {
+  },
   data() {
     return {};
   },
   methods: {},
   created() {
-    console.log(this.$route); //打印当前路由属性
+    // console.log(this.$route); //打印当前路由属性
     if (this.$route.path === "/") {
-      this.$router.replace({ name: "Main" });
-      console.log("123");
-      // this.$router.replace("/Main");
+      console.log("root");
+      // this.$router.replace({ name: "Main" });
+      this.$router.replace({ name: "Login" }).catch(() => {
+      });
     }
   },
 };
 </script>
 
-<style></style>
+<style>
+.bg {
+  width: 100%;
+  height: 100vh;
+}
+</style>

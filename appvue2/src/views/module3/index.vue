@@ -1,6 +1,8 @@
 <template>
   <div class="bg3">
-    <BaseNavBar :title="title" :isBack="false"> </BaseNavBar>
+    <BaseNavBar :title="title" :isBack="false">
+      <van-icon name="setting-o" size="18" slot="right" @click="onClickNavItem" color="white" />
+    </BaseNavBar>
     <div>这是模块3</div>
   </div>
 </template>
@@ -13,7 +15,11 @@ export default {
       title: "模块3",
     };
   },
-  methods: {},
+  methods: {
+    onClickNavItem() {
+      this.$router.replace({ name: "Set" });
+    }
+  },
   created() {
     console.log("模块3");
   },

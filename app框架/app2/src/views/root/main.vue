@@ -1,24 +1,14 @@
 <template>
   <div class="bg">
-    <!-- <BaseNavBar :title="title" :isBack="isBack" :isPlaceholder="true">
-      <van-icon name="cross" size="18" slot="left" />
-      <van-icon name="circle" size="18" slot="right" />
-    </BaseNavBar> -->
     <router-view></router-view>
-    <BaseTabBar
-      :selected="selected"
-      :tabBars="tabBars"
-      @onChange="onChange"
-    ></BaseTabBar>
+    <BaseTabBar :selected="selected" :tabBars="tabBars" @onChange="onChange"></BaseTabBar>
   </div>
 </template>
 
 <script>
-// import BaseNavBar from "../../components/BaseNavBar.vue";
 import BaseTabBar from "../../components/BaseTabBar.vue";
 export default {
   components: {
-    // BaseNavBar,
     BaseTabBar,
   },
   data() {
@@ -26,7 +16,6 @@ export default {
       title: "标题",
       isBack: false,
       selected: 1,
-      isPlaceholder: true,
       tabBars: [
         {
           name: "/Module1",
@@ -44,6 +33,14 @@ export default {
           iconPath: require("@assets/tab/tab2.png"),
           selectedIconPath: require("@assets/tab/tab2_select.png"),
         },
+        // {
+        //   name: "/DemoList",
+        //   isShowRedDot: false,
+        //   badge: "",
+        //   text: "Demo",
+        //   iconPath: require("@assets/tab/tab2.png"),
+        //   selectedIconPath: require("@assets/tab/tab2_select.png"),
+        // },
         {
           name: "/Module3",
           isShowRedDot: true,
@@ -71,7 +68,7 @@ export default {
         : false;
     },
   },
-  created() {},
+  created() { },
 };
 </script>
 

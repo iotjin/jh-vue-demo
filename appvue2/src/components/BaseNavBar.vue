@@ -1,15 +1,15 @@
 <template>
   <div class="navBar">
     <van-nav-bar :title="title" fixed safe-area-inset-top @click-left="onClickLeft" @click-right="onClickRight">
-      <div v-if="$slots.left" slot="left">
+      <template v-if="$slots.left" slot="left">
         <slot name="left"></slot>
-      </div>
-      <div v-else-if="isBack" slot="left">
+      </template>
+      <template v-else-if="isBack" slot="left">
         <van-icon name="arrow-left" size="18" :color="backIconColor" />
-      </div>
-      <div slot="right">
+      </template>
+      <template slot="right">
         <slot name="right"></slot>
-      </div>
+      </template>
     </van-nav-bar>
     <div class="nav-top-placeholder" v-if="isPlaceholder"></div>
   </div>
@@ -32,7 +32,7 @@ export default {
     // 标题
     title: { type: String, default: "" },
     // 固定在顶部时，是否在标签位置生成一个等高的占位元素
-    isPlaceholder: { type: Boolean, default: false },
+    isPlaceholder: { type: Boolean, default: true },
   },
   methods: {
     onClickLeft() {

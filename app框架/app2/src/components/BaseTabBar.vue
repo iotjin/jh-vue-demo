@@ -1,14 +1,6 @@
 <template>
   <div>
-    <van-tabbar
-      v-model="currentSelected"
-      :inactive-color="color"
-      :active-color="selectedColor"
-      @change="onChange"
-      route
-      placeholder
-      safe-area-inset-bottom
-    >
+    <van-tabbar v-model="currentSelected" :inactive-color="color" :active-color="selectedColor" @change="onChange" route placeholder safe-area-inset-bottom>
       <!-- 
       <van-tabbar-item icon="home-o" replace to="/Module1">标签1</van-tabbar-item>
       <van-tabbar-item icon="search" replace to="/Module2">标签2</van-tabbar-item>
@@ -16,13 +8,7 @@
       <van-tabbar-item icon="setting-o" replace to="/Module4">标签4</van-tabbar-item> 
       -->
       <template v-for="item in tabBars">
-        <van-tabbar-item
-          :key="item.name"
-          :to="item.name"
-          :badge="item.badge"
-          :dot="item.isShowRedDot"
-          replace
-        >
+        <van-tabbar-item :key="item.name" :to="item.name" :badge="item.badge" :dot="item.isShowRedDot" replace>
           <span>{{ item.text }}</span>
           <template #icon="props">
             <img :src="props.active ? item.selectedIconPath : item.iconPath" />
@@ -103,7 +89,6 @@ export default {
   methods: {
     onChange(index) {
       // console.log("内部-切换到tabbar：" + index);
-      this.currentSelected = index;
       this.$emit("onChange", index); //往外传值
     },
   },
@@ -121,7 +106,7 @@ export default {
       this.$router.push(this.tabBars[this.currentSelected].name);
     }
   },
-  mounted() {},
+  mounted() { },
 };
 </script>
 

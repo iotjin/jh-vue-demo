@@ -20,19 +20,16 @@ export default {
       console.log("点击按钮");
       this.$router.push({ name: "DemoList", params: { setid: 111222 } });
     },
-  },
-  created() {
-    console.log("模块2");
-  },
-  mounted() {
-    console.log("mounted");
+    created() {
+      console.log("模块2");
+    },
   },
 };
 </script>
 
 <style>
 .bg2 {
-  width: 100%;
+  width: auto;
   height: 100vh;
   /* background: red; */
 }
@@ -41,7 +38,6 @@ export default {
   height: 200px;
   background: palevioletred;
 }
-
 .bg10 {
   background: pink;
 }

@@ -30,6 +30,8 @@ export default {
         this.$router.push({ name: item.name });
       }
 
+      // window.localStorage.removeItem('userInfo');
+      // this.$router.replace({ name: "Login" });
     },
   },
   created() { },

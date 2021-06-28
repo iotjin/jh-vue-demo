@@ -1,22 +1,16 @@
 <template>
-  <div id="app">
-    <Main></Main>
-  </div>
-
-  <!-- <router-view id="app">
+  <router-view id="app">
     <Root></Root>
-  </router-view> -->
+  </router-view>
 </template>
 
 <script>
-// import Root from "./views/root/index.vue";
-import Main from "./views/root/main.vue";
+import Root from "./views/root/index.vue";
 
 export default {
   name: "App",
   components: {
-    // Root,
-    Main,
+    Root,
   },
   data() {
     return {};

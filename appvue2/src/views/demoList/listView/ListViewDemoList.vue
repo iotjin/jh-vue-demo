@@ -2,7 +2,7 @@
   <div class="bg">
     <BaseNavBar :title="title"> </BaseNavBar>
     <van-cell-group>
-      <van-cell center :title="item.text" is-link v-for="item in dataArr" :key="item.name" @click="onClick(item)" />
+      <van-cell center :title="item.text" is-link v-for="item in dataArr" :key="item.name" @click="onClickItem(item)" />
     </van-cell-group>
   </div>
 </template>
@@ -17,16 +17,18 @@ export default {
         { text: "ListView1", name: "ListView1" },
         { text: "ListView2", name: "ListView2" },
         { text: "ListView3", name: "ListView3" },
-        { text: "ListView4", name: "ListView4" },
+        { text: "ListView4", name: "TopTab" },
         { text: "ListView5", name: "ListView5" },
       ],
     };
   },
   methods: {
-    onClick(item) {
+    onClickItem(item) {
       console.log(JSON.stringify(item));
       console.log(item.text);
-      // this.$router.push({ name: item.name });
+      if (item.text) {
+        this.$router.push({ name: item.name });
+      }
     },
   },
   created() { },

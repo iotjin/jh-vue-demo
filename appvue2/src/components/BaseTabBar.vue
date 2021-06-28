@@ -1,5 +1,5 @@
 <template>
-  <div v-if="$route.meta.isShowTabBar">
+  <div>
     <van-tabbar v-model="currentSelected" :inactive-color="color" :active-color="selectedColor" @change="onChange" route placeholder safe-area-inset-bottom>
       <!-- 
       <van-tabbar-item icon="home-o" replace to="/Module1">标签1</van-tabbar-item>
