@@ -18,7 +18,7 @@ export default {
         { text: "GridView", name: "GridViewDemoList" },
         { text: "ECharts", name: "EChartsDemoList" },
         { text: "UI", name: "" },
-        { text: "Other", name: "" },
+        { text: "Other", name: "OtherDemoList" },
       ],
     };
   },

@@ -12,6 +12,7 @@ import { List } from 'vant';
 import { ActionSheet } from 'vant';
 import { Dialog } from 'vant';
 import { Toast } from 'vant';
+import { Grid, GridItem } from 'vant';
 
 
 
@@ -31,3 +32,5 @@ Vue.use(List);
 Vue.use(ActionSheet);
 Vue.use(Dialog);
 Vue.use(Toast);
+Vue.use(Grid);
+Vue.use(GridItem);

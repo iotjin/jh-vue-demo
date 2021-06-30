@@ -10,7 +10,7 @@ export default {
   components: {},
   data() {
     return {
-      title: "Listdiv4 - tab分页数据",
+      title: "ListView4 - tab分页数据",
       color: 'red',
       // bgColor: 'red',
       bgColor: '#f8f8f8',

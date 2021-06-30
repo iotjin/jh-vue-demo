@@ -37,6 +37,10 @@ import ECharts4 from "../views/demoList/echarts/ECharts4.vue";
 import ECharts5 from "../views/demoList/echarts/ECharts5.vue";
 
 
+import OtherDemoList from "../views/demoList/other/OtherDemoList.vue";
+import Map from "../views/demoList/other/Map.vue";
+
+
 import Set from "../views/module3/set/index.vue";
 
 Vue.use(VueRouter);
@@ -92,8 +96,12 @@ const routes = [
   { path: "/DemoList/ECharts/ECharts4", name: "ECharts4", component: ECharts4, },
   { path: "/DemoList/ECharts/ECharts5", name: "ECharts5", component: ECharts5, },
 
-  { path: "/Module3/Set", name: "Set", component: Set, },
+  // Other
+  { path: "/DemoList/Other/OtherDemoList", name: "OtherDemoList", component: OtherDemoList, },
+  { path: "/DemoList/Other/Map", name: "Map", component: Map, },
 
+
+  { path: "/Module3/Set", name: "Set", component: Set, },
 
 
   { path: "/NotFound", name: "NotFound", component: NotFound },

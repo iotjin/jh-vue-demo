@@ -14,11 +14,11 @@ export default {
     return {
       title: "GridViewDemoList",
       dataArr: [
-        { text: "GridView1", name: "GridView1" },
-        { text: "GridView2", name: "GridView2" },
-        { text: "GridView3", name: "GridView3" },
-        { text: "GridView4", name: "GridView4" },
-        { text: "GridView5", name: "GridView5" },
+        { text: "GridView1 - 动态数据", name: "GridView1" },
+        { text: "GridView2 - 固定头尾", name: "GridView2" },
+        { text: "GridView3 - 自定义多列", name: "GridView3" },
+        { text: "GridView4 - 分组功能列表", name: "GridView4" },
+        { text: "GridView5", name: "" },
       ],
     };
   },
@@ -26,7 +26,9 @@ export default {
     onClick(item) {
       console.log(JSON.stringify(item));
       console.log(item.text);
-      // this.$router.push({ name: item.name });
+      if (item.name) {
+        this.$router.push({ name: item.name });
+      }
     },
   },
   created() { },

@@ -14,11 +14,11 @@ export default {
     return {
       title: "EChartsDemoList",
       dataArr: [
-        { text: "ECharts1", name: "ECharts1" },
-        { text: "ECharts2", name: "ECharts2" },
-        { text: "ECharts3", name: "ECharts3" },
-        { text: "ECharts4", name: "ECharts4" },
-        { text: "ECharts5", name: "ECharts5" },
+        { text: "柱状图-异步加载", name: "ECharts1" },
+        { text: "柱状图-异步加载2", name: "ECharts2" },
+        { text: "多图表", name: "ECharts3" },
+        { text: "柱状图折线图混合图表", name: "ECharts4" },
+        { text: "渐变折线图", name: "ECharts5" },
       ],
     };
   },
@@ -26,7 +26,9 @@ export default {
     onClick(item) {
       console.log(JSON.stringify(item));
       console.log(item.text);
-      // this.$router.push({ name: item.name });
+      if (item.name) {
+        this.$router.push({ name: item.name });
+      }
     },
   },
   created() { },
