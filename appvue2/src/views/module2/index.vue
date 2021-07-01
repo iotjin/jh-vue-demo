@@ -20,9 +20,9 @@ export default {
       console.log("点击按钮");
       this.$router.push({ name: "DemoList", params: { setid: 111222 } });
     },
-    created() {
-      console.log("模块2");
-    },
+  },
+  created() {
+    console.log("模块2");
   },
 };
 </script>

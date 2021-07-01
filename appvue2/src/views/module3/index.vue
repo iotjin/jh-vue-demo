@@ -8,6 +8,10 @@
 </template>
 
 <script>
+const CommonUtils = require('@utils/commonUtils');
+// const CommonUtils = require('../../utils/commonUtils.js');
+const TimeUtils = require('../../utils/timeUtils.js');
+
 export default {
   components: {},
   data() {
@@ -22,6 +26,8 @@ export default {
   },
   created() {
     console.log("模块3");
+    console.log(CommonUtils.getSafeRandomNum(1, 10));
+    console.log(TimeUtils.Jh_timeStampToTime(new Date().getTime(), '{y}年{m}月{d}日 {h}:{i}:{s} 星期{w}'));
   },
 };
 </script>
