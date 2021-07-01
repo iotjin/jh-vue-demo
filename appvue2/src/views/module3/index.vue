@@ -8,7 +8,7 @@
 </template>
 
 <script>
-const CommonUtils = require('@utils/commonUtils');
+const CommonUtils = require('@utils/commonUtils.js');
 // const CommonUtils = require('../../utils/commonUtils.js');
 const TimeUtils = require('../../utils/timeUtils.js');
 

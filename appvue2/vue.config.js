@@ -18,6 +18,7 @@ module.exports = {
       .set("@tab", resolve("src/assets/tab"))
       .set('@views', resolve('src/views'))
       .set('@utils', resolve('src/utils'))
+      .set('@http', resolve('src/http'))
   },
   // less设置
   pluginOptions: {

@@ -18,7 +18,7 @@ export default {
         { text: "ListView2 - 分页假数据", name: "ListView2" },
         { text: "ListView3 - 分页数据", name: "ListView3" },
         { text: "ListView4 - tab分页数据", name: "TopTab" },
-        { text: "ListView5", name: "ListView5" },
+        { text: "ListView5 - 网络请求", name: "ListView5" },
       ],
     };
   },
