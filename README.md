@@ -12,6 +12,7 @@ A new vue project - 实现一些常用效果、封装通用组件和工具类 <b
 - GridView 相关
 - ECharts 相关(多图表异步加载、渐变折线图、折线柱状图混合图表)
 - 路由管理
+- axios网络请求封装
 - 基类 BaseNavBar、BaseTabBar、BaseTopTabs(顶部分页)
 - Vant
 - 百度地图
